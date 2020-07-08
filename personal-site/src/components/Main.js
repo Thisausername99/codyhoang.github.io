@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import uni from '../images/umass.jpg'
 import pic02 from '../images/pic02.jpg'
-
+import transcript from '../images/transcript.pdf'
 
 class Main extends React.Component {
   render() {
@@ -33,8 +33,8 @@ class Main extends React.Component {
             <img src={uni} alt="" />
           </span>
           <p>
-            I'm Huy Hoang. I'm pursueing B.A in Computer Science at University of Massachusetts Amherst.
-            By the way, check out my <a href="#work">awesome work</a>.
+            I'm Huy Hoang. I'm pursueing B.A in Computer Science at University of Massachusetts Amherst. Checkout my <a href={transcript}> resume </a>
+            and my <a href="#work">awesome works</a>.
           </p>
           <p>
             I am a responsible, self-disciplined, committed, and studious individual. I’m tidy and like to keep things
