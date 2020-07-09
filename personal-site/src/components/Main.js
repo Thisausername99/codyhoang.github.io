@@ -1,10 +1,8 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import uni from '../images/umass2.jpg'
-import pic02 from '../images/pic02.jpg'
 import transcript from '../images/transcript.pdf'
-// import 'bootstrap/dist/css/bootstrap.min.css'
-import { Carousel } from 'react-bootstrap'
+
 
 
 class Main extends React.Component {
@@ -58,7 +56,8 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <h2 className="major">work</h2>
-          <Carousel>
+          {/* <work /> */}
+          {/* <Carousel>
           <Carousel.Item>
             <img
               className="d-block w-100"
@@ -94,7 +93,7 @@ class Main extends React.Component {
               <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
             </Carousel.Caption>
           </Carousel.Item>
-        </Carousel>
+        </Carousel> */}
           {close}
         </article>
 
