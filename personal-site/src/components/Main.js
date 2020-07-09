@@ -1,8 +1,11 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import uni from '../images/umass.jpg'
+import uni from '../images/umass2.jpg'
 import pic02 from '../images/pic02.jpg'
 import transcript from '../images/transcript.pdf'
+// import 'bootstrap/dist/css/bootstrap.min.css'
+import { Carousel } from 'react-bootstrap'
+
 
 class Main extends React.Component {
   render() {
@@ -30,7 +33,7 @@ class Main extends React.Component {
         >
           <h2 className="major">Intro</h2>
           <span className="image main">
-            <img src={uni} alt="" />
+            <img src={uni} alt="" height="250"/>
           </span>
           <p>
             I'm Huy Hoang. I'm pursueing B.A in Computer Science at University of Massachusetts Amherst. Checkout my <a href={transcript}> transcript </a>
@@ -55,21 +58,43 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <h2 className="major">work</h2>
-          <span className="image main">
-            <img src={pic02} alt="" />
-          </span>
-          <p>
-            Need to brainstorm
-          </p>
-          <p>
-            Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
-            libero. Mauris aliquet magna magna sed nunc rhoncus pharetra.
-            Pellentesque condimentum sem. In efficitur ligula tate urna.
-            Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor.
-            Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis
-            libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat
-            tempus.
-          </p>
+          <Carousel>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src="holder.js/800x400?text=First slide&bg=373940"
+              alt="First slide"
+            />
+            <Carousel.Caption>
+              <h3>First slide label</h3>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src="holder.js/800x400?text=Second slide&bg=282c34"
+              alt="Third slide"
+            />
+
+            <Carousel.Caption>
+              <h3>Second slide label</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src="holder.js/800x400?text=Third slide&bg=20232a"
+              alt="Third slide"
+            />
+
+            <Carousel.Caption>
+              <h3>Third slide label</h3>
+              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+        </Carousel>
           {close}
         </article>
 

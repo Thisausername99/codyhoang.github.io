@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
 import '../assets/scss/main.scss'
+// import 'bootstrap/dist/css/bootstrap.min.css'
 
 const Layout = ({ children, location }) => {
 
