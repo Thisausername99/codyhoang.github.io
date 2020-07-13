@@ -2,6 +2,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import uni from '../images/umass2.jpg'
 import transcript from '../images/transcript.pdf'
+import Work from './Work/Timeline'
 
 
 
@@ -38,6 +39,7 @@ class Main extends React.Component {
             and my <a href="#work">awesome works</a>.
           </p>
           <p>
+            {/* <timeline/> */}
             I am a responsible, self-disciplined, committed, and studious individual. I’m tidy and like to keep things
             neat and elegant just like my code. I’ve developed a deep admiration for computer science as technology has
             inevitably revolutionized the world. I, myself, want to contribute to this revolution; therefore, becoming
@@ -56,44 +58,9 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <h2 className="major">work</h2>
-          {/* <work /> */}
-          {/* <Carousel>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="holder.js/800x400?text=First slide&bg=373940"
-              alt="First slide"
-            />
-            <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="holder.js/800x400?text=Second slide&bg=282c34"
-              alt="Third slide"
-            />
-
-            <Carousel.Caption>
-              <h3>Second slide label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="holder.js/800x400?text=Third slide&bg=20232a"
-              alt="Third slide"
-            />
-
-            <Carousel.Caption>
-              <h3>Third slide label</h3>
-              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-        </Carousel> */}
+          <div>
+            <Work />
+          </div>
           {close}
         </article>
 
