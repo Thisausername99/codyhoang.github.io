@@ -31,7 +31,7 @@ strong {
   font-weight: 600;
 }
 
-h1 {
+.for_h1 {
   font-family: $font-title;
   letter-spacing: 1.5px;
   color: $color-light;
@@ -112,34 +112,41 @@ h1 {
         content: "";
         top: 5px;
       }
-        h2, h3 {
+        h2, h3{
           font-family: $font-title;
           letter-spacing: 1.5px;
           font-weight: 400;
-          font-size: 1.4em;
-          p {
-            font-weight: 300;
-              a {
-                color: $color-dim;
-                text-decoration: none;
-                text-transform: uppercase;
-                display: block;
-                letter-spacing: .3em;
-                font-size: .6em;
-                font-weight: 400;
-                background: #252727;
-                padding: .3rem 1rem;
-                margin: 1.9rem 0 0 0;
-                float: right;
-                }
-              a:hover {
-                color: $color-light;
-                background: $color-primary;
-                border-bottom: .35em solid black;
+          font-size: 1.3em;
+            p {
+              font-weight: 300;
+                a {
+                  color: $color-dim;
+                  text-decoration: none;
+                  text-transform: uppercase;
+                  display: block;
+                  letter-spacing: .3em;
+                  font-size: .6em;
+                  font-weight: 400;
+                  background: #252727;
+                  padding: .3rem 1rem;
+                  margin: 1.9rem 0 0 0;
+                  float: right;
+                  }
+                a:hover {
+                  color: $color-light;
+                  background: $color-primary;
+                  border-bottom: .35em solid black;
           }
         }
       }
     }
+  }
+
+  h4{
+    font-family: $font-title;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    font-size: 0.8em;
   }
 
   // .event {
