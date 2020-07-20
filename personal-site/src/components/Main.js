@@ -101,14 +101,14 @@ class Main extends React.Component {
           </form>
           <ul className="icons">
             <li>
-              <a href="https://www.linkedin.com/in/huy-hoang-cody/" className="icon fa-linkedin">
+              <a href="https://www.linkedin.com/in/huy-hoang-cody/" className="icon fab fa-linkedin">
                 <span className="label">Instagram</span>
               </a>
             </li>
             <li>
               <a
                 href="https://github.com/Thisausername99"
-                className="icon fa-github"
+                className="icon fab fa-github"
               >
                 <span className="label">GitHub</span>
               </a>

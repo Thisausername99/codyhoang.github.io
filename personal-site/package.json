@@ -4,7 +4,12 @@
   "version": "1.0.0",
   "author": "Cody Hoang",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
     "@fortawesome/free-brands-svg-icons": "^5.14.0",
+    "@fortawesome/free-regular-svg-icons": "^5.14.0",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/react-fontawesome": "^0.1.11",
     "bootstrap": "^4.5.0",
     "bourbon": "^7.0.0",
     "gatsby": "^2.24.4",

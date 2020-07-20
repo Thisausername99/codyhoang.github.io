@@ -7,9 +7,11 @@
 /* Icon */
 
 	.icon {
-		@include icon;
+		// @include icon;
 		border-bottom: none;
 		position: relative;
+		text-align: center;
+		display: inline-block;
 
 		> .label {
 			display: none;
