@@ -1,5 +1,6 @@
 import React from "react"
 import styles from "./_marque.module.scss"
+import '@fortawesome/free-brands-svg-icons';
 
 class Banner extends React.Component{
     componentDidMount() {

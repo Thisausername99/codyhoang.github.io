@@ -4,10 +4,11 @@
   "version": "1.0.0",
   "author": "Cody Hoang",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.14.0",
+    "@fortawesome/free-brands-svg-icons": "^5.14.0",
     "bootstrap": "^4.5.0",
     "bourbon": "^7.0.0",
     "gatsby": "^2.24.4",
+    "gatsby-plugin-fontawesome-css": "^1.0.0",
     "gatsby-plugin-less": "^4.0.2",
     "gatsby-plugin-manifest": "^2.4.18",
     "gatsby-plugin-react-helmet": "^3.3.10",
