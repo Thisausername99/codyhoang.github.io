@@ -104,7 +104,6 @@ class IndexPage extends React.Component {
               onCloseArticle={this.handleCloseArticle}
               setWrapperRef={this.setWrapperRef}
             />
-            {/* <Work/> */}
             <Footer timeout={this.state.timeout} />
           </div>
           <div id="bg"></div>

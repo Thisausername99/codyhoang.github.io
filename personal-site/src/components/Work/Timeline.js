@@ -1,44 +1,50 @@
 import React from "react"
 import internOne from "../../images/bevoo.png"
 import arduiNo from "../../images/arduino.png"
+import trellis from "../../images/trellis.png"
+import fpt from "../../images/fpt-software-logo.png"
 import styles from "./_timeline.module.scss"
 
 
 
 class Work extends React.Component {
   render () {
-    const mystyle = {
-      display: "block",
-      width:"20%",
-      padding:"20px"
-    }
-
     return (
       <div className={styles.timeline_content}>
       <h1 className={styles.for_h1}>Timeline</h1>
       <ul className={styles.timeline}>
-        <li className={styles.event} data-date="65Mill" >
-          {/* <img src = {internOne}/> */}
-          <h3>software internship</h3>
+        <li className={styles.event} data-date="June - Present 2020" >
+          <h3>FPT software internship
+          <img src = {fpt} alt ="" style={{ display:"block", width:"20%", paddingTop:"10px"}}/>
+          </h3>
           <p>RAWWWWWWRRR</p>
         </li>
 
-        <li className={styles.event} data-date="November 15, 2018">
-          <h3>Trellis</h3>
+        <li className={styles.event} data-date="Jan - May 2020">
+          <h3>Trellis
+          <img src={trellis} alt="" style={{ display:"block", width:"20%", paddingTop:"10px"}}/>
+          </h3>
+          <h4>
+              Umass Amherst, MA, USA 01002
+          </h4>
+          <ul>
+            <li><a href="https://github.com/david-fisher/320-S20-Track2">GitHub</a></li>
+            <li>Developed a software that assists students from 5 colleges in booking appointment inspired by HandShake.</li>
+            <li>Designed and maintain API gateway integrating with front-end and database powered by AWS EC2.</li>
+          </ul>
 
-          <p>"We design and build from scratch!"</p>
-          <p>When we say <em><strong>100% custom</strong></em> we mean it— and we build all sites on the Squarespace Developer platform.</p>
-          <p>Did you know that all of our pixels are hand-forged from the rarest of subpixels grown and harvested in the <em>Nerd Forest</em></p>
-          <p><strong>Our success can be measured by lives and brands enhanced by 9+ years of 100% Squarespace-focused service!</strong></p>
-          {/* <p><a href="https://www.squareflair.com">squareflair.com</a></p> */}
         </li>
 
         <li className={styles.event} id="date" data-date="Sep - Dec 2019">
           <h3>HandTilt 3000
-          <img src = {arduiNo} style={{ display:"block", width:"20%", paddingTop:"10px"}}/>
+          <img src={arduiNo} alt="" style={{ display:"block", width:"20%", paddingTop:"10px"}}/>
           </h3>
+          <h4>
+              Umass Amherst, MA, USA 01002
+          </h4>
           <ul>
-            <li>Final project for CICS 290M.</li>
+            <li><a href="https://sites.google.com/umass.edu/gaming-with-gesture/">Project Site</a></li>
+            <li>Final project for CICS 290M - An physical computation intro course about fundamental of electronics and their applications.</li>
             <li>Reformed classic arcade games with revamped motion controller utilizing motion sensor (MPU 6050) on Arduino.</li>
           </ul>
         </li>
@@ -46,7 +52,7 @@ class Work extends React.Component {
 
         <li className={styles.event} data-date="June - August 2019">
           <h3>Bevootech internship
-          <a href="https://bevootech.com/"><img src = {internOne} href="https://bevootech.com/" style={{ display:"block", width:"20%", paddingTop:"10px"}}/></a>
+          <a href="https://bevootech.com/"> <img src={internOne} alt ="website" style={{ display:"block", width:"20%", paddingTop:"10px"}}/> </a>
           </h3>
           <h4>
               Bevootech PTE LTD, Singapore 349314

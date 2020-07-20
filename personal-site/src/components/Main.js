@@ -3,6 +3,7 @@ import React from 'react'
 import uni from '../images/umass2.jpg'
 import transcript from '../images/transcript.pdf'
 import Work from './Work/Timeline'
+import Banner from './Marquee/Banner.js'
 
 
 
@@ -47,6 +48,9 @@ class Main extends React.Component {
             in the E-sport industry. I have standard knowledge in Java, C, JS, Python. I thrive to learn more languages
             and be efficient in all of them.
           </p>
+          <div>
+            <Banner />
+          </div>
           {close}
         </article>
 
@@ -73,7 +77,7 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <h2 className="major">Contact</h2>
-          <form method="post" form method="post" action="https://getform.io/f/f2fe38a6-e294-4500-acc8-c07e24774103">
+          <form  method="post" action="https://getform.io/f/f2fe38a6-e294-4500-acc8-c07e24774103">
             <div className="field half first">
               <label htmlFor="name">Name</label>
               <input type="text" name="name" id="name" />
