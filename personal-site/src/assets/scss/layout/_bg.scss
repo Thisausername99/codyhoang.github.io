@@ -58,6 +58,10 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
     z-index: 1;
   }
 
