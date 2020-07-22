@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import uni from '../images/umass2.jpg'
+import uni from '../images/umass-logo.jpg'
 import transcript from '../images/transcript.pdf'
 import Work from './Work/Timeline'
 import Banner from './Marquee/Banner.js'
@@ -36,16 +36,14 @@ class Main extends React.Component {
             <img src={uni} alt="" height="250"/>
           </span>
           <p>
-            I'm Huy Hoang. I'm pursueing B.A in Computer Science at University of Massachusetts Amherst. Checkout my <a href={transcript}> transcript </a>
+            I'm Huy Hoang, a Computer Science at University of Massachusetts Amherst. Checkout my <a href={transcript}> transcript </a>
             and my <a href="#work">awesome works</a>.
           </p>
           <p>
-            {/* <timeline/> */}
             I am a responsible, self-disciplined, committed, and studious individual. I’m tidy and like to keep things
             neat and elegant just like my code. I’ve developed a deep admiration for computer science as technology has
             inevitably revolutionized the world. I, myself, want to contribute to this revolution; therefore, becoming
-            a successful programmer is my desire. My ultimate goal in life is to develop games that will become mainstream
-            in the E-sport industry. I have standard knowledge in Java, C, JS, Python. I thrive to learn more languages
+            a successful software engineer is my goal. I have standard knowledge in Java, C, JS, Python. I thrive to learn more languages
             and be efficient in all of them.
           </p>
           <div>
