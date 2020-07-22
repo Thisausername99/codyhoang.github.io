@@ -36,8 +36,7 @@ class Main extends React.Component {
             <img src={uni} alt="" height="250"/>
           </span>
           <p>
-            I'm Huy Hoang, a Computer Science at University of Massachusetts Amherst. Checkout my <a href={transcript}> transcript </a>
-            and my <a href="#work">awesome works</a>.
+            I'm Huy Hoang, I'm currently pursuing B.S in Computer Science at University of Massachusetts Amherst. Checkout my <a href={transcript}> transcript </a>.
           </p>
           <p>
             I am a responsible, self-disciplined, committed, and studious individual. I’m tidy and like to keep things
