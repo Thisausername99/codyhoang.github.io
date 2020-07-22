@@ -15,9 +15,12 @@ class Work extends React.Component {
       <ul className={styles.timeline}>
         <li className={styles.event} data-date="June - Present 2020" >
           <h3>FPT software internship
-          <img src = {fpt} alt ="" style={{ display:"block", width:"20%", paddingTop:"10px"}}/>
+          <a href="https://www.fpt-software.com/" > <img src = {fpt} alt="" style={{ display:"block", width:"20%", paddingTop:"10px"}}/> </a>
           </h3>
-          <p>RAWWWWWWRRR</p>
+          <ul>
+            <li> Improved development skills through build a simple website with ExpressJS and deploy using CI/CD tools and Docker.</li>
+            <li> Learned about system architect and the process of software deployment.</li>
+          </ul>
         </li>
 
         <li className={styles.event} data-date="Jan - May 2020">
@@ -58,7 +61,7 @@ class Work extends React.Component {
               Bevootech PTE LTD, Singapore 349314
           </h4>
           <ul>
-            <li>Developed UI friendly chat bot scripts generator using MEAN stack</li>
+            <li>Developed UI friendly chat bot scripts generator using MEAN stack.</li>
             <li>Developed website information scraper tools for specific needs.</li>
             <li>Customized Facebook chat bot utilizing DiaglogFlow for medical clinics, hospital.</li>
           </ul>
