@@ -6,8 +6,8 @@ class Banner extends React.Component {
         return (
             <div className={style.marquee}>
                 <span>
-                <i class="fab fa-java"></i>
-                <i class="fab fa-js-square"></i>
+                <i className="fab fa-java"></i>
+                <i className="fab fa-js-square"></i>
                 <i className="fab fa-python"></i>
                 <i className="fab fa-github"> </i>
                 <i className="fab fa-react"> </i>

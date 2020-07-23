@@ -255,17 +255,17 @@ const dataExamples = [
 
 
 const VerticalLoadMore = () => {
-  const [elements, setElements] = useState([]);
+  let counter = 1;
+  const [elements, setElements] = useState([dataExamples[0]]);
 
   useEffect(() => {
     loadMore();
   }, []);
 
-  const loadMore = () => {
-    setElements([...dataExamples]);
+  const loadMore = () => {  // this to set more state [...arr,...arr2] this is array concatentation
+    console.log(Array.isArray(dataExamples))
+    setElements([...elements]);
   };
-
-
 
   const addButton = () => (
     <Fab classes={{ root: 'fab-button' }} color="primary" aria-label="add">
@@ -274,9 +274,9 @@ const VerticalLoadMore = () => {
   );
 
   const getTimelineElements = () =>
-    elements.map(element => (
-      <VerticalTimelineElement {...element.props}>
-        <h3 className="vertical-timeline-element-title">{element.title}</h3>
+    elements.map((element,i) => (
+      <VerticalTimelineElement {...element.props} key ={i} >
+        <h3 className="vertical-timeline-element-title" >{element.title}</h3>
         <h4 className="vertical-timeline-element-subtitle">
           {element.subtitle}
         </h4>
