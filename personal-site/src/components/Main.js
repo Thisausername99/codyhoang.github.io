@@ -1,20 +1,17 @@
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types'
 import uni from '../images/umass-logo.jpg'
 import transcript from '../images/transcript.pdf'
-// import Work from './Work/Timeline'
 import Banner from './Marquee/Banner.js'
 
-
-import React, { useEffect, useState } from 'react';
 import StarIcon from '@material-ui/icons/Star';
 import SchoolIcon from '@material-ui/icons/School';
 import WorkIcon from '@material-ui/icons/Work';
 import AddCircleIcon from '@material-ui/icons/AddCircle';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-// import './Work/_timeline.module.scss';
 
-let counter = 1
+var counter = 1
 const data = [
   {
     props: {
@@ -108,15 +105,9 @@ const VerticalLoadMore = () => {
     loadMore();
   },[]);
 
+  // a => (a < 10) ? 'valid' : 'invalid'
+  const addButton = (icon) => (icon < data.length - 1)? <AddCircleIcon/> :  <StarIcon/>;
 
-  function addButton (icon) {
-    if (icon < data.length - 1)
-      // conosle.log(icon);
-    // <Fab classes={{ root: 'fab-button' }} color="primary" aria-label="add">
-      return <AddCircleIcon/>;
-    else
-      return <StarIcon/>;
-  }
 
   const getTimelineElements = () =>
     elements.map((element,i) => (
