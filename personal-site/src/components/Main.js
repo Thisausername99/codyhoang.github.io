@@ -1,19 +1,164 @@
 import PropTypes from 'prop-types'
-import React from 'react'
 import uni from '../images/umass-logo.jpg'
 import transcript from '../images/transcript.pdf'
-import Work from './Work/Timeline'
+// import Work from './Work/Timeline'
 import Banner from './Marquee/Banner.js'
 
 
+import React, { useEffect, useState } from 'react';
+import StarIcon from '@material-ui/icons/Star';
+import SchoolIcon from '@material-ui/icons/School';
+import WorkIcon from '@material-ui/icons/Work';
+import AddCircleIcon from '@material-ui/icons/AddCircle';
+import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
+// import './Work/_timeline.module.scss';
+
+let counter = 1
+const data = [
+  {
+    props: {
+      date: '2011 - present',
+      className: 'vertical-timeline-element--work',
+      contentStyle: { background: 'rgb(33, 150, 243)', color: '#fff' },
+      contentArrowStyle: { borderRight: '7px solid  rgb(33, 150, 243)' },
+      iconStyle: { background: 'rgb(33, 150, 243)', color: '#fff' },
+      icon: <WorkIcon />,
+    },
+    title: 'Creative Director',
+    subtitle: 'Miami, FL',
+    content:
+      'Creative Direction, User Experience, Visual Design, Project Management, Team Leading',
+  },
+  {
+    props: {
+      date: '2010 - 2011',
+      className: 'vertical-timeline-element--education',
+      contentStyle: { background: 'rgb(233, 30, 99)', color: '#fff' },
+      contentArrowStyle: { borderRight: '7px solid  rgb(233, 30, 99)' },
+      iconStyle: { background: 'rgb(233, 30, 99)', color: '#fff' },
+      icon: <SchoolIcon />,
+    },
+    title: 'Content Marketing for Web, Mobile and Social Media',
+    subtitle: 'Online Course',
+    content: 'Strategy, Social Media',
+  },
+  {
+    props: {
+      date: '2010 - 2011',
+      className: 'vertical-timeline-element--education',
+      contentStyle: { background: 'rgb(233, 30, 99)', color: '#fff' },
+      contentArrowStyle: { borderRight: '7px solid  rgb(233, 30, 99)' },
+      iconStyle: { background: 'rgb(233, 30, 99)', color: '#fff' },
+      icon: <SchoolIcon />,
+    },
+    title: 'Content Marketing for Web, Mobile and Social Media',
+    subtitle: 'Online Course',
+    content: 'Strategy, Social Media',
+  },
+
+  {
+    props: {
+      date: '2010 - 2011',
+      className: 'vertical-timeline-element--education',
+      contentStyle: { background: 'rgb(233, 30, 99)', color: '#fff' },
+      contentArrowStyle: { borderRight: '7px solid  rgb(233, 30, 99)' },
+      iconStyle: { background: 'rgb(233, 30, 99)', color: '#fff' },
+      icon: <SchoolIcon />,
+    },
+    title: 'Content Marketing for Web, Mobile and Social Media',
+    subtitle: 'Online Course',
+    content: 'Strategy, Social Media',
+  },
+
+  {
+    props: {
+      date: '2010 - 2011',
+      className: 'vertical-timeline-element--education',
+      contentStyle: { background: 'rgb(233, 30, 99)', color: '#fff' },
+      contentArrowStyle: { borderRight: '7px solid  rgb(233, 30, 99)' },
+      iconStyle: { background: 'rgb(233, 30, 99)', color: '#fff' },
+      icon: <SchoolIcon />,
+    },
+    title: 'Content Marketing for Web, Mobile and Social Media',
+    subtitle: 'Online Course',
+    content: 'Strategy, Social Media',
+  },
+
+
+];
+
+const VerticalLoadMore = () => {
+  const [elements, setElements] = useState(data.slice(0,1));
+
+
+  const loadMore = () => {                   // this to set more state [...arr,...arr2] this is array concatentation
+    if (counter  === data.length - 1){    //stop render
+      addButton(2)
+      return;
+    }
+    else
+      counter = counter + 1
+    setElements([...elements,...[data[counter]]]);
+    // console.log(counter)
+  }
+
+  useEffect(() => {
+    //eslint-disable-next-line react-hooks/exhaustive-deps
+    loadMore();
+  },[]);
+
+
+  function addButton (icon) {
+    if (icon < data.length - 1)
+      // conosle.log(icon);
+    // <Fab classes={{ root: 'fab-button' }} color="primary" aria-label="add">
+      return <AddCircleIcon/>;
+    else
+      return <StarIcon/>;
+  }
+
+  const getTimelineElements = () =>
+    elements.map((element,i) => (
+      <VerticalTimelineElement {...element.props} key ={i} >
+        <h3 className="vertical-timeline-element-title" >{element.title}</h3>
+        <h4 className="vertical-timeline-element-subtitle">
+          {element.subtitle}
+        </h4>
+        <p>{element.content}</p>
+      </VerticalTimelineElement>
+    ));
+
+  return (
+    <div>
+      <VerticalTimeline>
+        {getTimelineElements()}
+        <VerticalTimelineElement
+          iconOnClick={loadMore}
+          iconClassName="vertical-timeline-element-icon--button"
+          iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+          icon={addButton(counter)}
+        />
+      </VerticalTimeline>
+    </div>
+  );
+};
+
 
 class Main extends React.Component {
+  state   = {
+    reset : 0,
+  }
   render() {
     let close = (
       <div
         className="close"
         onClick={() => {
           this.props.onCloseArticle()
+          this.setState(prevState => ({
+            reset: prevState.reset + 1
+          }))
+          counter = 1 //reset display information
         }}
       ></div>
     )
@@ -60,7 +205,7 @@ class Main extends React.Component {
         >
           <h2 className="major">work</h2>
           <div>
-            <Work />
+            <VerticalLoadMore key={this.state.reset}/>
           </div>
           {close}
         </article>

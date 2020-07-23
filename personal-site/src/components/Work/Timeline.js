@@ -5,11 +5,11 @@
 // import fpt from "../../images/fpt-software-logo.png"
 // import styles from "./_timeline.module.scss"
 import React, { useEffect, useState } from 'react';
-import AddIcon from '@material-ui/icons/Add';
+import StarIcon from '@material-ui/icons/Star';
+
 import SchoolIcon from '@material-ui/icons/School';
 import WorkIcon from '@material-ui/icons/Work';
 import AddCircleIcon from '@material-ui/icons/AddCircle';
-import Fab from '@material-ui/core/Fab';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import './_timeline.module.scss'
@@ -179,7 +179,7 @@ import './_timeline.module.scss'
 // export default Work
 
 
-const dataExamples = [
+const data = [
   {
     props: {
       date: '2011 - present',
@@ -254,24 +254,37 @@ const dataExamples = [
 
 
 
+var counter = 1
+
 const VerticalLoadMore = () => {
-  let counter = 1;
-  const [elements, setElements] = useState([dataExamples[0]]);
+  const [elements, setElements] = useState(data.slice(0,1));
+
+
+  const loadMore = () => {                   // this to set more state [...arr,...arr2] this is array concatentation
+    if (counter  === data.length - 1){    //stop render
+      addButton(2)
+      return;
+    }
+    else
+      counter = counter + 1
+    setElements([...elements,...[data[counter]]]);
+    console.log(counter)
+  }
 
   useEffect(() => {
+    //eslint-disable-next-line react-hooks/exhaustive-deps
     loadMore();
-  }, []);
+  },[]);
 
-  const loadMore = () => {  // this to set more state [...arr,...arr2] this is array concatentation
-    console.log(Array.isArray(dataExamples))
-    setElements([...elements]);
-  };
 
-  const addButton = () => (
-    <Fab classes={{ root: 'fab-button' }} color="primary" aria-label="add">
-      <AddCircleIcon />
-    </Fab>
-  );
+  function addButton (icon) {
+    if (icon < data.length - 1)
+      // conosle.log(icon);
+    // <Fab classes={{ root: 'fab-button' }} color="primary" aria-label="add">
+      return <AddCircleIcon/>;
+    else
+      return <StarIcon/>;
+  }
 
   const getTimelineElements = () =>
     elements.map((element,i) => (
@@ -292,7 +305,7 @@ const VerticalLoadMore = () => {
           iconOnClick={loadMore}
           iconClassName="vertical-timeline-element-icon--button"
           iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-          icon={<AddCircleIcon/>}
+          icon={addButton(counter)}
         />
       </VerticalTimeline>
     </div>
