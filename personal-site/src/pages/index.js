@@ -14,7 +14,8 @@ class IndexPage extends React.Component {
       timeout: false,
       articleTimeout: false,
       article: '',
-      loading: 'is-loading'
+      loading: 'is-loading',
+      reset : 0,
     }
     this.handleOpenArticle = this.handleOpenArticle.bind(this)
     this.handleCloseArticle = this.handleCloseArticle.bind(this)
@@ -46,6 +47,10 @@ class IndexPage extends React.Component {
       isArticleVisible: !this.state.isArticleVisible,
       article
     })
+
+    this.setState(prevState => ({
+      reset: prevState.reset + 1
+    }))
 
     setTimeout(() => {
       this.setState({
@@ -84,7 +89,7 @@ class IndexPage extends React.Component {
 
   handleClickOutside(event) {
     if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
-      console.log(event.target)
+      //console.log(event.target)
       if (this.state.isArticleVisible) {
         this.handleCloseArticle();
       }
@@ -104,6 +109,7 @@ class IndexPage extends React.Component {
               article={this.state.article}
               onCloseArticle={this.handleCloseArticle}
               setWrapperRef={this.setWrapperRef}
+              key = {this.state.reset}
             />
             <Footer timeout={this.state.timeout} />
           </div>
