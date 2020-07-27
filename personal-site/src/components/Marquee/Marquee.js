@@ -8,7 +8,7 @@ class MarqueeScroll extends React.Component {
 
     return (
         <div className={style.marquee}>
-        <Marquee delay="1000">
+        <Marquee delay={1000}>
             <span>
                 <i className="fab fa-java"></i>
                 <i className="fab fa-js-square"></i>

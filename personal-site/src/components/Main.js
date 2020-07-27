@@ -97,10 +97,11 @@ class Main extends React.Component {
               </li>
             </ul>
           </form>
+
           <ul className="icons">
             <li>
               <a href="https://www.linkedin.com/in/huy-hoang-cody/" className="icon fab fa-linkedin">
-                <span className="label">Instagram</span>
+                <span className="label">linkedin</span>
               </a>
             </li>
             <li>
@@ -110,6 +111,12 @@ class Main extends React.Component {
               >
                 <span className="label">GitHub</span>
               </a>
+            </li>
+
+            <li>
+            <a href="mailto:cody_hoang99@yahoo.com" className="icon fa fa-envelope">
+              <span className="label">Email</span>
+            </a>
             </li>
           </ul>
           {close}

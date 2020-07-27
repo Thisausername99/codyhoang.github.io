@@ -11,24 +11,25 @@
 		border: 0;
 		display: inline-block;
 		position: relative;
+		// margin : 0 auto;
 
 		&:before {
 			@include vendor('pointer-events', 'none');
 			background-image: url('../../images/overlay.png');
 			background-color: _palette(bg-overlay);
-			border-radius: _size(border-radius);
+			border-radius: 15px;//_size(border-radius);
 			content: '';
 			display: block;
 			height: 100%;
-			left: 0;
-			opacity: 0.4;
+			left : 0;
+			opacity: 0.8;
 			position: absolute;
 			top: 0;
 			width: 100%;
 		}
 
 		img {
-			border-radius: _size(border-radius);
+			border-radius: 15px;//_size(border-radius);
 			display: block;
 		}
 
@@ -55,7 +56,7 @@
 
 		&.fit {
 			display: block;
-			margin: 0 0 _size(element-margin) 0;
+			margin: _size(element-margin) 0;
 			width: 100%;
 
 			img {
