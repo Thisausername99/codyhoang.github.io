@@ -3,12 +3,13 @@ import PropTypes from 'prop-types'
 import uni from '../images/umass-logo.jpg'
 import transcript from '../images/transcript.pdf'
 import Marq from './Marquee/Marquee.js'
-import Work from './Work/Timeline.js'
+import Work from './Work/Work.js'
+import Project from './Work/Project'
 
 
 class Main extends React.Component {
   render() {
-    let close = (
+    const close = (
       <div
         className="close"
         onClick={() => {
@@ -57,11 +58,26 @@ class Main extends React.Component {
           }`}
           style={{ display: 'none' }}
         >
-          <h2 className="major">work</h2>
+          <h2 className="major">work & experiences</h2>
           <div>
             {/* <VerticalLoadMore key={this.state.reset}/>
              */}
             <Work/>
+          </div>
+          {close}
+        </article>
+
+
+        <article
+          id="project"
+          className={`${this.props.article === 'project' ? 'active' : ''} ${
+            this.props.articleTimeout ? 'timeout' : ''
+          }`}
+          style={{ display: 'none' }}
+        >
+          <h2 className="major">project</h2>
+          <div>
+            <Project/>
           </div>
           {close}
         </article>

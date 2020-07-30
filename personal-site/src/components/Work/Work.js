@@ -11,7 +11,7 @@ import SchoolIcon from '@material-ui/icons/School'
 import WorkIcon from '@material-ui/icons/Work'
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component'
 import 'react-vertical-timeline-component/style.min.css'
-import './_timeline.module.scss'
+import  style from './_timeline.module.scss'
 
 
 class Work extends React.Component {
@@ -76,7 +76,8 @@ class Work extends React.Component {
 
 
 //       // </ul>
-//       // </div>
+      <div>
+      <h1 className={style.h1_style}>Timeline</h1>
       <VerticalTimeline>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
@@ -89,13 +90,14 @@ class Work extends React.Component {
           {/* <FontAwesomeIcon icon={faHome} /> */}
           <h3 className="vertical-timeline-element-title">Creative Director</h3>
           <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
-          <p>
-            Creative Direction, User Experience, Visual Design, Project Management, Team Leading
-          </p>
+              <p>Developed UI friendly chat bot scripts generator using MEAN stack.</p>
+              <p>Developed website information scraper tools for specific needs.</p>
+              <p>Customized Facebook chat bot utilizing DiaglogFlow for medical clinics, hospital.</p>
+
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }} 
+          contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
           date="2010 - 2011"
           iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
           icon={<WorkIcon />}
@@ -108,7 +110,7 @@ class Work extends React.Component {
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }} 
+          contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
           date="2010 - 2011"
           iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
           icon={<WorkIcon />}
@@ -121,7 +123,7 @@ class Work extends React.Component {
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }} 
+          contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
           date="2010 - 2011"
           iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
           icon={<WorkIcon />}
@@ -137,6 +139,7 @@ class Work extends React.Component {
           icon={<StarIcon />}
         />
       </VerticalTimeline>
+      </div>
     )
   }
 }
