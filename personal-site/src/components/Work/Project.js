@@ -1,6 +1,6 @@
 import React from 'react'
 import StarIcon from '@material-ui/icons/Star'
-import SchoolIcon from '@material-ui/icons/School'
+import BuildIcon from '@material-ui/icons/Build'
 import { makeStyles } from '@material-ui/core/styles';
 import  WorkIcon from '@material-ui/icons/Work'
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component'
@@ -19,7 +19,7 @@ const Project = () => {
 
     return (
         <div>
-        <h1>Timeline</h1>
+        <h1 className="h1_style">Timeline</h1>
         <VerticalTimeline>
         <VerticalTimelineElement
             className="vertical-timeline-element--work"
@@ -27,7 +27,7 @@ const Project = () => {
             contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
             date="2011 - present"
             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-            // icon={faHome}
+            icon={<BuildIcon/>}
         >
             {/* <FontAwesomeIcon icon={faHome} /> */}
             <h3 className="vertical-timeline-element-title">Creative Director</h3>
@@ -42,7 +42,7 @@ const Project = () => {
             contentStyle={{ background: 'rgb(128,0,0)', color: '#fff' }}
             date="2010 - 2011"
             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-            icon={<WorkIcon />}
+            icon={<BuildIcon />}
         >
             <h3 className="vertical-timeline-element-title">Art Director</h3>
             <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
@@ -50,7 +50,7 @@ const Project = () => {
                 variant="contained"
                 color="secondary"
                 className={classes.button}
-                startIcon={<WorkIcon />}
+                startIcon={<BuildIcon />}
             >
             Delete
             </Button>

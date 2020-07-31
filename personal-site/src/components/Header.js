@@ -24,7 +24,7 @@ const Header = props => (
           <h1>Huy HoanG</h1>
           <p className="typewritter">
           {/* Programmer, Software Engineer, GameI am a&nbsp; */}
-          <RotatingText items={['Programmer', 'Software Enginner', 'Gamer']} />
+          <RotatingText items={['Programmer', 'Software Engineer', 'Gamer']} />
           </p>
         </div>
       </div>

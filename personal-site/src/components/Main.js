@@ -1,10 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import uni from '../images/umass-logo.jpg'
-import transcript from '../images/transcript.pdf'
+import resume from '../images/resume.pdf'
 import Marq from './Marquee/Marquee.js'
 import Work from './Work/Work.js'
-import Project from './Work/Project'
+import Project from './Work/Project.js'
+import Tree from './Intro/Intro.js'
 
 
 class Main extends React.Component {
@@ -35,8 +36,11 @@ class Main extends React.Component {
           <span className="image main">
             <img src={uni} alt="" height="250"/>
           </span>
+          {/* <div>
+            <Tree/>
+          </div> */}
           <p>
-            I'm Huy Hoang, I'm currently pursuing B.S in Computer Science at University of Massachusetts Amherst. Checkout my <a href={transcript}> transcript </a>.
+            I'm Huy Hoang, I'm currently pursuing B.S in Computer Science at University of Massachusetts Amherst. Checkout my <a href={resume}> resume </a>.
           </p>
           <p>
             I am a responsible, self-disciplined, committed, and studious individual. I’m tidy and like to keep things

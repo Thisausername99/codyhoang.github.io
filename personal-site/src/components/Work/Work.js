@@ -1,4 +1,3 @@
-
 // import internOne from "../../images/bevoo.png"
 // import arduiNo from "../../images/arduino.png"
 // import trellis from "../../images/trellis.png"
@@ -11,7 +10,7 @@ import SchoolIcon from '@material-ui/icons/School'
 import WorkIcon from '@material-ui/icons/Work'
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component'
 import 'react-vertical-timeline-component/style.min.css'
-import  style from './_timeline.module.scss'
+// import  style from './_timeline.module.scss'
 
 
 class Work extends React.Component {
@@ -77,67 +76,51 @@ class Work extends React.Component {
 
 //       // </ul>
       <div>
-      <h1 className={style.h1_style}>Timeline</h1>
+      <h1 className="h1_style">Timeline</h1>
       <VerticalTimeline>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-          contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-          date="2011 - present"
-          iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-          // icon={faHome}
+          contentStyle={{ background: 'rgb(123,104,238)', color: '#fff' }}
+          // contentArrowStyle={{ borderRight: '6px solid  rgb(33, 150, 243)' }}
+          date="June - August 2018"
+          iconStyle={{ background: 'rgb(189,183,107)', color: '#fff' }}
+          icon={<WorkIcon/>}
         >
           {/* <FontAwesomeIcon icon={faHome} /> */}
-          <h3 className="vertical-timeline-element-title">Creative Director</h3>
-          <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
-              <p>Developed UI friendly chat bot scripts generator using MEAN stack.</p>
-              <p>Developed website information scraper tools for specific needs.</p>
-              <p>Customized Facebook chat bot utilizing DiaglogFlow for medical clinics, hospital.</p>
-
+          Bevootech
+          <h2 className="vertical-timeline-element-title">R&D Developer Intern </h2>
+          <h3 className="vertical-timeline-element-subtitle">Singapore, Singapore</h3>
+            <ul>
+              <li>Developed UI friendly chat bot scripts generator using MEAN stack.</li>
+              <li>Developed website information scraper tools for specific needs.</li>
+              <li>Customized Facebook chat bot utilizing DiaglogFlow for medical clinics, hospital.</li>
+            </ul>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+          contentStyle={{ background: 'rgb(123,104,238)', color: '#fff' }}
           date="2010 - 2011"
-          iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+          iconStyle={{ background: 'rgb(189,183,107)', color: '#fff' }}
           icon={<WorkIcon />}
-        >
-          <h3 className="vertical-timeline-element-title">Art Director</h3>
-          <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
+        >  FPT Software
+          <h2 className="vertical-timeline-element-title">Software Engineer</h2>
+          <h3 className="vertical-timeline-element-subtitle">Ho Chi Minh, VietNam</h3>
           <p>
             Creative Direction, User Experience, Visual Design, SEO, Online Marketing
           </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-          date="2010 - 2011"
-          iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-          icon={<WorkIcon />}
+          contentStyle={{ background: 'rgb(119,136,153)', color: '#fff' }}
+          iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
+          icon={<StarIcon/>}
         >
-          <h3 className="vertical-timeline-element-title">Art Director</h3>
-          <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
-          <p>
-            Creative Direction, User Experience, Visual Design, SEO, Online Marketing
-          </p>
+         <h3>To be continue</h3>
         </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-          date="2010 - 2011"
-          iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-          icon={<WorkIcon />}
-        >
-          <h3 className="vertical-timeline-element-title">Art Director</h3>
-          <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
-          <p>
-            Creative Direction, User Experience, Visual Design, SEO, Online Marketing
-          </p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
+        {/* <VerticalTimelineElement
           iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
           icon={<StarIcon />}
-        />
+        /> */}
       </VerticalTimeline>
       </div>
     )
