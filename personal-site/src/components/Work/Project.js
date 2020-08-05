@@ -13,35 +13,35 @@ import { Button } from '@material-ui/core';
 
 
 const Project = () => {
-
     const inlineStyle = {
         // width: "10px",
-        // height: "90px",
+        fontFamily: "system-ui",
         padding: "6px",
-        //paddingBottom: "px",
+        // background-image: linear-gradient(45deg, #874da2 0%, #c43a30 100%);
+        //background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);;;;8%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);        
         whiteSpace: "nowrap",
         overflowX: "auto",
         overflowY: "hidden",
-        backgroundColor:"#F5F5F5",
+        background:"linear-gradient(to top, #fddb92 0%, #d1fdff 100%)",
         margin: "3px"
     }
-
+    //background-image: linear-gradient(to top, #a7a6cb 0%, #8989ba 52%, #8989ba 100%);
     return (
         <div>
-        <h1 className="h1_style">I have done what ?</h1>
+        <h1 className="h1_style">I hit these!</h1>
         <VerticalTimeline>
         <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            contentStyle={{ background: 'rgb(112,128,144)', color: '#fff' }}
+            contentStyle={{ background: 'linear-gradient(to right, #6a11cb 0%, #2575fc 100%)', color: '#fff' }}
             // contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
             date="Jan - May 2020"
-            iconStyle={{ background: 'rgb(139,0,139)', color: '#fff' }}
+            iconStyle={{ background: 'linear-gradient(to top, #48c6ef 0%, #6f86d6 100%)', color: '#fff' }}
             icon={<BuildIcon/>}
         > TRELLIS
             <img src={trellis} alt="" className="logoImage"/>
 
             {/* <FontAwesomeIcon icon={faHome} /> */}
-            <h2 className="vertical-timeline-element-title">Backend Developer</h2>
+            <h3 className="vertical-timeline-element-title">Backend Developer</h3>
             <h4 className="vertical-timeline-element-subtitle">Amherst, MA</h4>
                 <Button
                     variant="contained"
@@ -57,17 +57,17 @@ const Project = () => {
                     <li>Designed and maintain API gateway integrating with front-end and database powered by AWS EC2.</li>
                 </ul>
         </VerticalTimelineElement>
-
+        {/* background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%); */}
         <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            contentStyle={{ background: 'rgb(112,128,144)', color: '#fff' }}
+            contentStyle={{ background: 'linear-gradient(to right, #6a11cb 0%, #2575fc 100%)', color: '#fff' }}
             // contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
             date="Sep - Dec 2019"
-            iconStyle={{ background: 'rgb(139,0,139)', color: '#fff' }}
+            iconStyle={{ background: 'linear-gradient(to top, #48c6ef 0%, #6f86d6 100%)', color: '#fff' }}
             icon={<BuildIcon />}
         >HANDTILT3000
         <img src={arduiNo} alt="" className="logoImage"/>
-            <h2 className="vertical-timeline-element-title">Hardware Developer</h2>
+            <h3 className="vertical-timeline-element-title">Hardware Developer</h3>
             <h4 className="vertical-timeline-element-subtitle">Amherst, MA</h4>
             <Button
                     variant="contained"

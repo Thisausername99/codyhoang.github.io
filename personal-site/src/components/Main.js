@@ -6,6 +6,7 @@ import Marq from './Marquee/Marquee.js'
 import Work from './Work/Work.js'
 import Project from './Work/Project.js'
 import Tree from './Intro/Intro.js'
+import { Button } from '@material-ui/core'
 
 
 class Main extends React.Component {
@@ -36,9 +37,6 @@ class Main extends React.Component {
           <span className="image main">
             <img src={uni} alt="" height="250"/>
           </span>
-          {/* <div>
-            <Tree/>
-          </div> */}
           <p>
             I'm Huy Hoang, I'm currently pursuing B.S in Computer Science at University of Massachusetts Amherst. Checkout my <a href={resume}> resume </a>.
           </p>
@@ -49,6 +47,8 @@ class Main extends React.Component {
             a successful software engineer is my goal. I have standard knowledge in Java, C, JS, Python. I thrive to learn more languages
             and be efficient in all of them.
           </p>
+          {/* <Button className="testbutton" href={resume}>
+          </Button> */}
           <div>
             <Marq />
           </div>
