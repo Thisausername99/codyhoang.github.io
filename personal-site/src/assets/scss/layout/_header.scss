@@ -39,22 +39,21 @@
   max-width: 100%;
   text-align: center;
 
-
   .fancy {
-      // color: #B6FF00;
-      font-family: "Press Start 2P";
-      font-size: 2em;
-      word-spacing: -20px;
+    // color: #B6FF00;
+    font-family: "Press Start 2P";
+    font-size: 2em;
+    word-spacing: -20px;
+    padding-left: inherit;
+    // text-align: center;
 
-      &:hover {
-        -webkit-animation: neon4 1.5s ease-in-out infinite alternate;
-        -moz-animation: neon4 1.5s ease-in-out infinite alternate;
-        animation: neon4 1.5s ease-in-out infinite alternate;
-      }
+    &:hover {
+      -webkit-animation: neon4 1.5s ease-in-out infinite alternate;
+      -moz-animation: neon4 1.5s ease-in-out infinite alternate;
+      animation: neon4 1.5s ease-in-out infinite alternate;
     }
-
-
-
+  }
+  
   > * {
     @include vendor('transition', 'opacity #{_duration(article)} ease-in-out');
     position: relative;
