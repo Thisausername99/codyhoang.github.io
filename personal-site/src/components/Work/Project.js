@@ -28,7 +28,7 @@ const Project = () => {
     //background-image: linear-gradient(to top, #a7a6cb 0%, #8989ba 52%, #8989ba 100%);
     return (
         <div>
-        <h1 className="h1_style">I hit these!</h1>
+        <h1 className="h1_style">Innovation</h1>
         <VerticalTimeline>
         <VerticalTimelineElement
             className="vertical-timeline-element--work"
@@ -48,7 +48,6 @@ const Project = () => {
                     style={inlineStyle}
                     startIcon={<GitHub/>}
                     href="https://github.com/david-fisher/320-S20-Track2"
-                    // style={{margin:"10px"}}
                 >
                 Github
                 </Button>
@@ -57,7 +56,6 @@ const Project = () => {
                     <li>Designed and maintain API gateway integrating with front-end and database powered by AWS EC2.</li>
                 </ul>
         </VerticalTimelineElement>
-        {/* background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%); */}
         <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{ background: 'linear-gradient(to right, #6a11cb 0%, #2575fc 100%)', color: '#fff' }}

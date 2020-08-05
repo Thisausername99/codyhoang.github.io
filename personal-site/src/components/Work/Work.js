@@ -50,14 +50,7 @@ class Work extends React.Component {
               <li>Customized Facebook chat bot utilizing DiaglogFlow for medical clinics, hospital.</li>
             </ul>
         </VerticalTimelineElement>
-        {/* <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          contentStyle={{ background: 'rgb(119,136,153)', color: '#fff' }}
-          iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
-          icon={<StarIcon/>}
-        >
-        <h3>To be continue</h3>
-        </VerticalTimelineElement> */}
+
         <VerticalTimelineElement
           iconStyle={{ background: 'linear-gradient(to right, #f83600 0%, #f9d423 100%)', color: '#fff' }}
           icon={<StarIcon />}
