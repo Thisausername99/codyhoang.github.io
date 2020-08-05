@@ -21,7 +21,7 @@ class Work extends React.Component {
           className="vertical-timeline-element--work"
           contentStyle={{ background: 'linear-gradient(-20deg, #2b5876 0%, #4e4376 100%)', color: '#fff' }}
           date="May - Current 2020"
-          iconStyle={{ background: 'linear-gradient(to top, #ff0844 0%, #ffb199 100%)', color: '#fff' }}
+          iconStyle={{ background: 'linear-gradient(to top, #f43b47 0%, #453a94 100%)', color: '#fff' }}
           icon={<WorkIcon />}
           >FPT SOFTWARE
           <img src={fpt} alt="" className="logoImage"/>
@@ -38,7 +38,7 @@ class Work extends React.Component {
           contentStyle={{ background: 'linear-gradient(-20deg, #2b5876 0%, #4e4376 100%)', color: '#fff' }}
           // contentArrowStyle={{ borderRight: '6px solid  rgb(33, 150, 243)' }}
           date="June - August 2018"
-          iconStyle={{ background: 'linear-gradient(to top, #ff0844 0%, #ffb199 100%)', color: '#fff' }}
+          iconStyle={{ background: 'linear-gradient(to top, #f43b47 0%, #453a94 100%)', color: '#fff' }}
           icon={<WorkIcon/>}
         >BEVOOTECH
           <img src={beevo} href="https://bevootech.com/" alt="" className="logoImage"/>
