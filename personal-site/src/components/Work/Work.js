@@ -32,7 +32,7 @@ class Work extends React.Component {
             <li> Learned about system architect with backend development.</li>
           </ul>
         </VerticalTimelineElement>
-        background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           contentStyle={{ background: 'linear-gradient(-20deg, #2b5876 0%, #4e4376 100%)', color: '#fff' }}
@@ -68,4 +68,3 @@ class Work extends React.Component {
   }
 }
 export default Work
-// background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
