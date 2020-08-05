@@ -1,8 +1,10 @@
 import React from 'react'
+import trellis from "../../images/trellis.png"
+import arduiNo from "../../images/arduino.png"
 import StarIcon from '@material-ui/icons/Star'
+import GitHub from '@material-ui/icons/GitHub'
 import BuildIcon from '@material-ui/icons/Build'
-import { makeStyles } from '@material-ui/core/styles';
-import  WorkIcon from '@material-ui/icons/Work'
+import HttpsIcon from '@material-ui/icons/Https';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component'
 import 'react-vertical-timeline-component/style.min.css'
 import './_timeline.module.scss'
@@ -11,95 +13,87 @@ import { Button } from '@material-ui/core';
 
 
 const Project = () => {
-    const classes =  makeStyles((theme) => ({
-            button: {
-            margin: theme.spacing(2),
-            },
-        }));
+
+    const inlineStyle = {
+        // width: "10px",
+        // height: "90px",
+        padding: "6px",
+        //paddingBottom: "px",
+        whiteSpace: "nowrap",
+        overflowX: "auto",
+        overflowY: "hidden",
+        backgroundColor:"#F5F5F5",
+        margin: "3px"
+    }
 
     return (
         <div>
-        <h1 className="h1_style">Timeline</h1>
+        <h1 className="h1_style">I have done what ?</h1>
         <VerticalTimeline>
         <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-            contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-            date="2011 - present"
-            iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+            contentStyle={{ background: 'rgb(112,128,144)', color: '#fff' }}
+            // contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+            date="Jan - May 2020"
+            iconStyle={{ background: 'rgb(139,0,139)', color: '#fff' }}
             icon={<BuildIcon/>}
-        >
+        > TRELLIS
+            <img src={trellis} alt="" className="logoImage"/>
+
             {/* <FontAwesomeIcon icon={faHome} /> */}
-            <h3 className="vertical-timeline-element-title">Creative Director</h3>
-            <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
-                <p>Developed UI friendly chat bot scripts generator using MEAN stack.</p>
-                <p>Developed website information scraper tools for specific needs.</p>
-                <p>Customized Facebook chat bot utilizing DiaglogFlow for medical clinics, hospital.</p>
+            <h2 className="vertical-timeline-element-title">Backend Developer</h2>
+            <h4 className="vertical-timeline-element-subtitle">Amherst, MA</h4>
+                <Button
+                    variant="contained"
+                    style={inlineStyle}
+                    startIcon={<GitHub/>}
+                    href="https://github.com/david-fisher/320-S20-Track2"
+                    // style={{margin:"10px"}}
+                >
+                Github
+                </Button>
+                <ul>
+                    <li>Developed a software that assists students from 5 colleges in booking appointment that suits their needs inspired by HandShake.</li>
+                    <li>Designed and maintain API gateway integrating with front-end and database powered by AWS EC2.</li>
+                </ul>
         </VerticalTimelineElement>
 
         <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            contentStyle={{ background: 'rgb(128,0,0)', color: '#fff' }}
-            date="2010 - 2011"
-            iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+            contentStyle={{ background: 'rgb(112,128,144)', color: '#fff' }}
+            // contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+            date="Sep - Dec 2019"
+            iconStyle={{ background: 'rgb(139,0,139)', color: '#fff' }}
             icon={<BuildIcon />}
-        >
-            <h3 className="vertical-timeline-element-title">Art Director</h3>
-            <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
+        >HANDTILT3000
+        <img src={arduiNo} alt="" className="logoImage"/>
+            <h2 className="vertical-timeline-element-title">Hardware Developer</h2>
+            <h4 className="vertical-timeline-element-subtitle">Amherst, MA</h4>
             <Button
-                variant="contained"
-                color="secondary"
-                className={classes.button}
-                startIcon={<BuildIcon />}
-            >
-            Delete
+                    variant="contained"
+                    style={inlineStyle}
+                    startIcon={<GitHub/>}
+                    href="https://github.com/Thisausername99/HandTilt3000"
+                    // style={{margin:"10px"}}
+                >
+                Github
             </Button>
             <Button
                 variant="contained"
-                color="secondary"
-                className={classes.button}
-                startIcon={<WorkIcon />}
+                style={inlineStyle}
+                startIcon={<HttpsIcon />}
+                href="https://sites.google.com/umass.edu/gaming-with-gesture/"
             >
-            Delete
+            Website
             </Button>
-            {/* <Button variant="contained" style = {{display:"inline-block"}} >Default</Button>
-            <Button variant="contained" style = {{display:"inline-block"}} >Default</Button> */}
-            {/* <IconButton style = {{display:"inline-block"}} aria-label="delete">
-                <WorkIcon />
-            </IconButton> */}
-            <p>
-            Creative Direction, User Experience, Visual Design, SEO, Online Marketing
-            </p>
+            <ul>
+                <li>Final project for CICS 290M - An physical computation intro course about fundamental of electronics and their applications.</li>
+                <li>Reformed classic arcade games with revamped motion controller utilizing motion sensor (MPU 6050) on Arduino.</li>
+            </ul>
         </VerticalTimelineElement>
 
         <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-            date="2010 - 2011"
-            iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-            icon={<WorkIcon />}
-        >
-            <h3 className="vertical-timeline-element-title">Art Director</h3>
-            <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
-            <p>
-            Creative Direction, User Experience, Visual Design, SEO, Online Marketing
-            </p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-            date="2010 - 2011"
-            iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-            icon={<WorkIcon />}
-        >
-            <h3 className="vertical-timeline-element-title">Art Director</h3>
-            <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
-            <p>
-            Creative Direction, User Experience, Visual Design, SEO, Online Marketing
-            </p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-            iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
+            iconStyle={{ background: 'rgb(255,215,0)', color: '#fff' }}
             icon={<StarIcon />}
         />
         </VerticalTimeline>

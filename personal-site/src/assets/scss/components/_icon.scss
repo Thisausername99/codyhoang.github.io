@@ -28,3 +28,47 @@
 			display: none;
 		}
 	}
+
+	.wrapper{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 550px;
+        transform: translate(-50%,-50%);
+	}
+
+	.wrapper ul{
+		list-style: none;
+	}
+
+
+	.wrapper ul li{
+		width: 75px;
+		height: 75px;
+		line-height: 75px;
+		margin: 0 10px;
+		text-align: center;
+		cursor: pointer;
+		border-radius: 50%;
+		border: 5px solid #444c47;
+		float: left;
+		transition: all 0.5s ease;
+	}
+
+	.wrapper ul li .fa{
+		color: #444c47;
+		margin-top: 20px;
+		transition: all 0.5s ease;
+	}
+
+	.wrapper ul li:hover.facebook{
+		border: 5px solid  #3b5998;
+		box-shadow: 0 0 15px  #3b5998;
+		transition: all 0.5s ease;
+	}
+
+	.wrapper ul li:hover .fa-facebook{
+		color: #3b5998;
+		text-shadow: 0 0 15px #3b5998;
+		transition: all 0.5s ease;
+	}

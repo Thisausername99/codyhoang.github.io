@@ -1,8 +1,6 @@
-// import internOne from "../../images/bevoo.png"
-// import arduiNo from "../../images/arduino.png"
-// import trellis from "../../images/trellis.png"
-// import fpt from "../../images/fpt-software-logo.png"
-// import styles from "./_timeline.module.scss"
+import beevo from "../../images/bevoo.png"
+import fpt from "../../images/fpt-software-logo.png"
+
 import React from 'react'
 import StarIcon from '@material-ui/icons/Star'
 
@@ -78,6 +76,23 @@ class Work extends React.Component {
       <div>
       <h1 className="h1_style">Timeline</h1>
       <VerticalTimeline>
+      <VerticalTimelineElement
+          className="vertical-timeline-element--work"
+          contentStyle={{ background: 'rgb(123,104,238)', color: '#fff' }}
+          date="May - Current 2020"
+          iconStyle={{ background: 'rgb(189,183,107)', color: '#fff' }}
+          icon={<WorkIcon />}
+          >  <a href="https://www.fpt-software.com/">FPT SOFTWARE
+          <img src={fpt} alt="" className="logoImage"/>
+          </a>
+          <h2 className="vertical-timeline-element-title">Software Engineer Intern</h2>
+          <h3 className="vertical-timeline-element-subtitle">Ho Chi Minh, VietNam</h3>
+          <ul>
+            <li> Builded a simple website with ExpressJS and deployed with CI/CD tools and Docker.</li>
+            <li> Learned about system architect with backend development.</li>
+          </ul>
+        </VerticalTimelineElement>
+
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           contentStyle={{ background: 'rgb(123,104,238)', color: '#fff' }}
@@ -87,7 +102,9 @@ class Work extends React.Component {
           icon={<WorkIcon/>}
         >
           {/* <FontAwesomeIcon icon={faHome} /> */}
-          Bevootech
+          <a href="https://bevootech.com/">BEVOOTECH
+          <img src={beevo} alt="" className="logoImage"/>
+          </a>
           <h2 className="vertical-timeline-element-title">R&D Developer Intern </h2>
           <h3 className="vertical-timeline-element-subtitle">Singapore, Singapore</h3>
             <ul>
@@ -96,31 +113,18 @@ class Work extends React.Component {
               <li>Customized Facebook chat bot utilizing DiaglogFlow for medical clinics, hospital.</li>
             </ul>
         </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          contentStyle={{ background: 'rgb(123,104,238)', color: '#fff' }}
-          date="2010 - 2011"
-          iconStyle={{ background: 'rgb(189,183,107)', color: '#fff' }}
-          icon={<WorkIcon />}
-        >  FPT Software
-          <h2 className="vertical-timeline-element-title">Software Engineer</h2>
-          <h3 className="vertical-timeline-element-subtitle">Ho Chi Minh, VietNam</h3>
-          <p>
-            Creative Direction, User Experience, Visual Design, SEO, Online Marketing
-          </p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
+        {/* <VerticalTimelineElement
           className="vertical-timeline-element--work"
           contentStyle={{ background: 'rgb(119,136,153)', color: '#fff' }}
           iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
           icon={<StarIcon/>}
         >
-         <h3>To be continue</h3>
-        </VerticalTimelineElement>
-        {/* <VerticalTimelineElement
-          iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
+        <h3>To be continue</h3>
+        </VerticalTimelineElement> */}
+        <VerticalTimelineElement
+          iconStyle={{ background: 'rgb(220,20,60)', color: '#fff' }}
           icon={<StarIcon />}
-        /> */}
+        />
       </VerticalTimeline>
       </div>
     )
@@ -130,137 +134,3 @@ class Work extends React.Component {
 export default Work
 
 
-// const data = [
-//   {
-//     props: {
-//       date: '2011 - present',
-//       className: 'vertical-timeline-element--work',
-//       contentStyle: { background: 'rgb(33, 150, 243)', color: '#fff' },
-//       contentArrowStyle: { borderRight: '7px solid  rgb(33, 150, 243)' },
-//       iconStyle: { background: 'rgb(33, 150, 243)', color: '#fff' },
-//       icon: <WorkIcon />,
-//     },
-//     title: 'Creative Director',
-//     subtitle: 'Miami, FL',
-//     content:
-//       'Creative Direction, User Experience, Visual Design, Project Management, Team Leading',
-//   },
-//   {
-//     props: {
-//       date: '2010 - 2011',
-//       className: 'vertical-timeline-element--education',
-//       contentStyle: { background: 'rgb(233, 30, 99)', color: '#fff' },
-//       contentArrowStyle: { borderRight: '7px solid  rgb(233, 30, 99)' },
-//       iconStyle: { background: 'rgb(233, 30, 99)', color: '#fff' },
-//       icon: <SchoolIcon />,
-//     },
-//     title: 'Content Marketing for Web, Mobile and Social Media',
-//     subtitle: 'Online Course',
-//     content: 'Strategy, Social Media',
-//   },
-//   {
-//     props: {
-//       date: '2010 - 2011',
-//       className: 'vertical-timeline-element--education',
-//       contentStyle: { background: 'rgb(233, 30, 99)', color: '#fff' },
-//       contentArrowStyle: { borderRight: '7px solid  rgb(233, 30, 99)' },
-//       iconStyle: { background: 'rgb(233, 30, 99)', color: '#fff' },
-//       icon: <SchoolIcon />,
-//     },
-//     title: 'Content Marketing for Web, Mobile and Social Media',
-//     subtitle: 'Online Course',
-//     content: 'Strategy, Social Media',
-//   },
-
-//   {
-//     props: {
-//       date: '2010 - 2011',
-//       className: 'vertical-timeline-element--education',
-//       contentStyle: { background: 'rgb(233, 30, 99)', color: '#fff' },
-//       contentArrowStyle: { borderRight: '7px solid  rgb(233, 30, 99)' },
-//       iconStyle: { background: 'rgb(233, 30, 99)', color: '#fff' },
-//       icon: <SchoolIcon />,
-//     },
-//     title: 'Content Marketing for Web, Mobile and Social Media',
-//     subtitle: 'Online Course',
-//     content: 'Strategy, Social Media',
-//   },
-
-//   {
-//     props: {
-//       date: '2010 - 2011',
-//       className: 'vertical-timeline-element--education',
-//       contentStyle: { background: 'rgb(233, 30, 99)', color: '#fff' },
-//       contentArrowStyle: { borderRight: '7px solid  rgb(233, 30, 99)' },
-//       iconStyle: { background: 'rgb(233, 30, 99)', color: '#fff' },
-//       icon: <SchoolIcon />,
-//     },
-//     title: 'Content Marketing for Web, Mobile and Social Media',
-//     subtitle: 'Online Course',
-//     content: 'Strategy, Social Media',
-//   },
-
-
-// ];
-
-
-
-// var counter = 1
-
-// const VerticalLoadMore = () => {
-//   const [elements, setElements] = useState(data.slice(0,1));
-
-
-//   const loadMore = () => {                   // this to set more state [...arr,...arr2] this is array concatentation
-//     if (counter  === data.length - 1){    //stop render
-//       addButton(2)
-//       return;
-//     }
-//     else
-//       counter = counter + 1
-//     setElements([...elements,...[data[counter]]]);
-//     console.log(counter)
-//   }
-
-//   useEffect(() => {
-//     //eslint-disable-next-line react-hooks/exhaustive-deps
-//     loadMore();
-//   },[]);
-
-
-//   function addButton (icon) {
-//     if (icon < data.length - 1)
-//       // conosle.log(icon);
-//     // <Fab classes={{ root: 'fab-button' }} color="primary" aria-label="add">
-//       return <AddCircleIcon/>;
-//     else
-//       return <StarIcon/>;
-//   }
-
-//   const getTimelineElements = () =>
-//     elements.map((element,i) => (
-//       <VerticalTimelineElement {...element.props} key ={i} >
-//         <h3 className="vertical-timeline-element-title" >{element.title}</h3>
-//         <h4 className="vertical-timeline-element-subtitle">
-//           {element.subtitle}
-//         </h4>
-//         <p>{element.content}</p>
-//       </VerticalTimelineElement>
-//     ));
-
-//   return (
-//     <div>
-//       <VerticalTimeline>
-//         {getTimelineElements()}
-//         <VerticalTimelineElement
-//           iconOnClick={loadMore}
-//           iconClassName="vertical-timeline-element-icon--button"
-//           iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-//           icon={addButton(counter)}
-//         />
-//       </VerticalTimeline>
-//     </div>
-//   );
-// };
-
-// export default VerticalLoadMore;
