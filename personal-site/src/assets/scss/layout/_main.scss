@@ -18,7 +18,7 @@
 		z-index: 3;
 		display: none;
 		// overflow: auto;
-
+		// rgb(38 41 37 / 42%)
 		article {
 			@include vendor('transform', 'translateY(0.25rem)');
 			@include vendor('transition', (
@@ -29,7 +29,7 @@
 			position: relative;
 			width: 50rem;
 			max-width: 100%;
-			background-color: transparentize(_palette(bg), 0.15);
+			background-color: transparentize(_palette(bg), 0.5);
 			border-radius: _size(border-radius);
 			opacity: 0;
 

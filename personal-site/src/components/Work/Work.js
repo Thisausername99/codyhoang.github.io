@@ -4,7 +4,7 @@ import fpt from "../../images/fpt-software-logo.png"
 import React from 'react'
 import StarIcon from '@material-ui/icons/Star'
 
-import SchoolIcon from '@material-ui/icons/School'
+// import SchoolIcon from '@material-ui/icons/School'
 import WorkIcon from '@material-ui/icons/Work'
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component'
 import 'react-vertical-timeline-component/style.min.css'
@@ -44,6 +44,26 @@ class Work extends React.Component {
           <img src={beevo} href="https://bevootech.com/" alt="" className="logoImage"/>
           <h3 className="vertical-timeline-element-title">R&D Developer Intern </h3>
           <h4 className="vertical-timeline-element-subtitle">Singapore, Singapore</h4>
+            <ul>
+              <li>Developed UI friendly chat bot scripts generator using MEAN stack.</li>
+              <li>Developed website information scraper tools for specific needs.</li>
+              <li>Customized Facebook chat bot utilizing DiaglogFlow for medical clinics, hospital.</li>
+            </ul>
+        </VerticalTimelineElement>
+
+
+
+        <VerticalTimelineElement
+          className="vertical-timeline-element--work"
+          contentStyle={{ background: 'linear-gradient(-20deg, #2b5876 0%, #4e4376 100%)', color: '#fff' }}
+          // contentArrowStyle={{ borderRight: '6px solid  rgb(33, 150, 243)' }}
+          date="Sep - Dec 2020"
+          iconStyle={{ background: 'linear-gradient(to top, #f43b47 0%, #453a94 100%)', color: '#fff' }}
+          icon={<WorkIcon/>}
+        >UMASS CICS
+          <img src={beevo} href="https://bevootech.com/" alt="" className="logoImage"/>
+          <h3 className="vertical-timeline-element-title">UCA </h3>
+          <h4 className="vertical-timeline-element-subtitle">Remote</h4>
             <ul>
               <li>Developed UI friendly chat bot scripts generator using MEAN stack.</li>
               <li>Developed website information scraper tools for specific needs.</li>
