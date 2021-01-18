@@ -1,16 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import uni from '../images/umass-logo.jpg'
-import resume from '../images/resume.pdf'
 import Marq from './Marquee/Marquee.js'
 import Work from './Work/Work.js'
 import Project from './Work/Project.js'
-import Tree from './Intro/Intro.js'
-import { Button } from '@material-ui/core'
+import 'react-awesome-slider/dist/styles.css';
+import Slider from './Intro/Intro';
+
+
+
 
 
 class Main extends React.Component {
+
   render() {
+
     const close = (
       <div
         className="close"
@@ -35,20 +38,29 @@ class Main extends React.Component {
         >
           <h2 className="major">Intro</h2>
           <span className="image main">
-            <img src={uni} alt="" height="250"/>
+              <Slider></Slider>
           </span>
-          <p>
+          <div class="table">
+            <ul class="fa-ul">
+              <li><span class="fa-li"><i class="fas fa-user"></i></span>
+                Hi, my name is Huy Hoang, and I go by Cody. I'm a developer by day, and gamer by night.
+              </li>
+              <li><span class="fa-li"><i class="fa fa-graduation-cap" aria-hidden="true"/></span> 
+                I'm a senior pursuing B.S degree in Computer Science at University of Massachusetts Amherst.
+              </li>
+              <li><span class="fa-li"><i class="fas fa-map-marker-alt"></i></span>
+                Ho Chi Minh, VN
+              </li>
+              <li><span class="fa-li"><i class="fas fa-hashtag"></i></span> Responsible, Self-disciplined, Committed.</li>
+            </ul>
+          </div>
+          {/* <p>
+          <i class="fa fa-graduation-cap" aria-hidden="true"/>
             I'm Huy Hoang, I'm currently pursuing B.S in Computer Science at University of Massachusetts Amherst. Checkout my <a href={resume}> resume </a>.
-          </p>
-          <p>
-            I am a responsible, self-disciplined, committed, and studious individual. I’m tidy and like to keep things
-            neat and elegant just like my code. I’ve developed a deep admiration for computer science as technology has
-            inevitably revolutionized the world. I, myself, want to contribute to this revolution; therefore, becoming
-            a successful software engineer is my goal. I have standard knowledge in Java, C, JS, Python. I thrive to learn more languages
-            and be efficient in all of them.
-          </p>
-          {/* <Button className="testbutton" href={resume}>
-          </Button> */}
+          </p> */}
+          {/* <p>
+            I am a responsible, self-disciplined, committed.
+          </p> */}
           <div>
             <Marq />
           </div>
@@ -64,8 +76,6 @@ class Main extends React.Component {
         >
           <h2 className="major">work & experiences</h2>
           <div>
-            {/* <VerticalLoadMore key={this.state.reset}/>
-             */}
             <Work/>
           </div>
           {close}

@@ -15,8 +15,8 @@
 
 		&:before {
 			@include vendor('pointer-events', 'none');
-			background-image: url('../../images/overlay.png');
-			background-color: _palette(bg-overlay);
+			// background-image: url('../../images/overlay.png');
+			// background-color: _palette(bg-overlay);
 			border-radius: 15px;//_size(border-radius);
 			content: '';
 			display: block;
@@ -68,6 +68,7 @@
 			display: block;
 			margin: (_size(element-margin) * 1.25) 0;
 			width: 100%;
+			padding-bottom: inherit;
 			// margin-left: auto;
 			// margin-right: auto;
 

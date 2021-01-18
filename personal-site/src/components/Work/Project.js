@@ -30,6 +30,33 @@ const Project = () => {
         <div>
         <h1 className="h1_style">Innovation</h1>
         <VerticalTimeline>
+
+        <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{ background: 'linear-gradient(to right, #6a11cb 0%, #2575fc 100%)', color: '#fff' }}
+            // contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+            date="Nov - Dec 2020"
+            iconStyle={{ background: 'linear-gradient(to top, #48c6ef 0%, #6f86d6 100%)', color: '#fff' }}
+            icon={<BuildIcon />}
+        >HACKERMATCH
+        {/* <img src={arduiNo} alt="" className="logoImage"/> */}
+            <h3 className="vertical-timeline-element-title">Backend Developer</h3>
+            <h4 className="vertical-timeline-element-subtitle">Remote</h4>
+            <Button
+                    variant="contained"
+                    style={inlineStyle}
+                    startIcon={<GitHub/>}
+                    href="https://github.com/k2nt/HackerMatch"
+                    // style={{margin:"10px"}}
+                >
+                Github
+            </Button>
+            <ul>
+                <li>Developed HackerMatch - a marketplace for Hacking event participants to advertise themselves and also seek desireteam members for their project.</li>
+                <li>Developed using MERN stack with backend composed of Restful API and mongoDB.</li>
+            </ul>
+        </VerticalTimelineElement>
+
         <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{ background: 'linear-gradient(to right, #6a11cb 0%, #2575fc 100%)', color: '#fff' }}
@@ -90,31 +117,6 @@ const Project = () => {
             </ul>
         </VerticalTimelineElement>
 
-        <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            contentStyle={{ background: 'linear-gradient(to right, #6a11cb 0%, #2575fc 100%)', color: '#fff' }}
-            // contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-            date="Nov - Dec 2020"
-            iconStyle={{ background: 'linear-gradient(to top, #48c6ef 0%, #6f86d6 100%)', color: '#fff' }}
-            icon={<BuildIcon />}
-        >HACKERMATCH
-        {/* <img src={arduiNo} alt="" className="logoImage"/> */}
-            <h3 className="vertical-timeline-element-title">Backend Developer</h3>
-            <h4 className="vertical-timeline-element-subtitle">Remote</h4>
-            <Button
-                    variant="contained"
-                    style={inlineStyle}
-                    startIcon={<GitHub/>}
-                    href="https://github.com/k2nt/HackerMatch"
-                    // style={{margin:"10px"}}
-                >
-                Github
-            </Button>
-            <ul>
-                <li>Final project for CICS 290M - An physical computation intro course about fundamental of electronics and their applications.</li>
-                <li>Reformed classic arcade games with revamped motion controller utilizing motion sensor (MPU 6050) on Arduino.</li>
-            </ul>
-        </VerticalTimelineElement>
 
         <VerticalTimelineElement
             iconStyle={{ background: 'rgb(255,215,0)', color: '#fff' }}

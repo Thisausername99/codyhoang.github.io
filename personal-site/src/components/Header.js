@@ -3,14 +3,19 @@ import React from 'react'
 import RotatingText from 'react-rotating-text'
 import Drill from './../audio/core_drill_sound.mp3'
 import useSound from 'use-sound';
-import { RestaurantMenu } from '@material-ui/icons';
+
+
 
 
 
 //add audio effect when hover over name
 
 const DrillAudio = () => {
-  const [play, { stop }] = useSound(Drill,{ volume: 0.5 });
+  const [play, { stop }] = useSound(
+    Drill,
+    { volume: 0.5,
+    loop : true }
+    );
   const [isHovering, setIsHovering] = React.useState(false);
   return (
           <div>
